@@ -2,7 +2,8 @@ import { useState } from "react";
 
 const useActive = () => {
   const [active, setActive] = useState(false);
-  return { active, setActive };
+  const test = 1;
+  return { active, setActive, test };
 };
 
 export default useActive;
