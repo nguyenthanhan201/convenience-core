@@ -14,8 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript-hooks": "file:typescript-hooks-1.0.3.tgz"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
