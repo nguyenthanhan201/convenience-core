@@ -5,6 +5,7 @@
   "description": "",
   "scripts": {
     "dev": "vite",
+    "test": "tsdx test --passWithNoTests",
     "build": "tsup src/hooks --format cjs,esm --minify --dts-resolve",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
