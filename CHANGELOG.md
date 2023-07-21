@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.2.0...v1.3.0) (2023-07-21)
+
+
+### Features
+
+* update release.yml ([a076790](https://github.com/nguyenthanhan201/typescript-hooks/commit/a076790dbb8a101f4c6f4c90631c23915f57348e))
+
 # [1.2.0](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.1.0...v1.2.0) (2023-07-21)
 
 
