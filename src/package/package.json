@@ -3,15 +3,20 @@
   "version": "1.0.3",
   "description": "",
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --minify --dts-resolve"
+    "build": "tsup index.ts --format cjs,esm --minify --dts-resolve",
+    "bundle-local": "npm run build && npm pack"
   },
-  "author": "",
+  "author": "An Nguyen",
   "license": "ISC",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "devDependencies": {
     "tsup": "^7.1.0"
   },
