@@ -1,15 +1,18 @@
 {
   "name": "typescript-hooks",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.3",
   "type": "module",
+  "description": "",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsup src/hooks --format cjs,esm --minify --dts-resolve",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "bundle-local": "npm run build && npm pack",
     "semantic-release": "semantic-release --branches main"
   },
+  "author": "An Nguyen",
+  "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,7 +30,19 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "semantic-release": "^21.0.7",
+    "tsup": "^7.1.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
-  }
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts"
 }

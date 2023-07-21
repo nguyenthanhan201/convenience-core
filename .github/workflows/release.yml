@@ -30,8 +30,8 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: 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
+          NPM_TOKEN: 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
         run: npm run semantic-release
 
   # quality:
