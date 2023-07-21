@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.3.0...v1.3.1) (2023-07-21)
+
+
+### Bug Fixes
+
+* fix hook ([3146bde](https://github.com/nguyenthanhan201/typescript-hooks/commit/3146bdeb94a15b52a24fe1460355c4dccdcef4dc))
+
 # [1.3.0](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.2.0...v1.3.0) (2023-07-21)
 
 
