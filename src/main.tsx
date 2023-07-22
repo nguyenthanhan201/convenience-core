@@ -1,7 +1,9 @@
+import { useUUID } from 'my-package';
 import ReactDOM from 'react-dom/client';
 
 function App() {
-  return <>123</>;
+  const id = useUUID();
+  return <>{id}</>;
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
