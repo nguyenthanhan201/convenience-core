@@ -1,5 +1,5 @@
 - Commit to release package <br/>
-  ![Alt text](image.png)
+  ![Alt text](images/image.png)
 
 - Controll version when release <br/>
-  ![Alt text](image-1.png)
+  ![Alt text](images/image-1.png)

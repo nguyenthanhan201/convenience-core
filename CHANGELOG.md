@@ -1,16 +1,14 @@
 ## [1.3.3](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.3.2...v1.3.3) (2023-07-21)
 
-
 ### Bug Fixes
 
-* update git action ([6ef4246](https://github.com/nguyenthanhan201/typescript-hooks/commit/6ef424669d9dcf40ea0e29645b3a4849e31f6596))
+- update git action ([6ef4246](https://github.com/nguyenthanhan201/typescript-hooks/commit/6ef424669d9dcf40ea0e29645b3a4849e31f6596))
 
 ## [1.3.2](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.3.1...v1.3.2) (2023-07-21)
 
-
 ### Bug Fixes
 
-* fix something ([5e629ef](https://github.com/nguyenthanhan201/typescript-hooks/commit/5e629ef5db4d40cca0c04cf0e5dc6137053c0c7b))
+- fix something ([5e629ef](https://github.com/nguyenthanhan201/typescript-hooks/commit/5e629ef5db4d40cca0c04cf0e5dc6137053c0c7b))
 
 ## [1.3.1](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.3.0...v1.3.1) (2023-07-21)
 

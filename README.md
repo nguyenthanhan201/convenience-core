@@ -4,3 +4,4 @@
 - [Degit](https://github.com/Rich-Harris/degit)
 - [Jenkins vs Github Action](https://www.youtube.com/watch?v=Gpl_usE_BWM&t=696s)
 - [Networking](docs/release.md)
+- [Reference](docs/reference.md)
