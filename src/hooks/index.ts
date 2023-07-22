@@ -1,4 +1,5 @@
 // eslint-disable-next-line simple-import-sort/exports
+export { default as useClickOutside } from './useClickOutside';
 export { default as useCookie } from './useCookie';
 export { default as useCopy } from './useCopy';
 export { default as useCounter } from './useCounter';
@@ -12,7 +13,6 @@ export { default as useInterval } from './useInterval';
 export { default as useLoading } from './useLoading';
 export { default as useLocalStorage } from './useLocalStorage';
 export { default as useNetWork } from './useNetwork';
-export { default as useOnClickOutside } from './useOnClickOutside';
 export { default as useOnScreen } from './useOnScreen';
 export { default as usePagination } from './usePagination';
 export { default as usePrevious } from './usePrevious';
@@ -22,3 +22,4 @@ export { default as useScrollBlock } from './useScrollBlock';
 export { default as useToggle } from './useToggle';
 export { default as useUUID } from './useUUID';
 export { default as useUncontrolled } from './useUncontrolled';
+export { default as useWindowEvent } from './useWindowEvent';

@@ -1,21 +1,62 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export default function useNetWork() {
-  const [status, setStatus] = useState(true);
+import useWindowEvent from './useWindowEvent';
 
-  const handleChange = () => {
-    if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
-      setStatus(navigator.onLine);
-    }
+interface NetworkStatus {
+  downlink?: number;
+  downlinkMax?: number;
+  effectiveType?: 'slow-2g' | '2g' | '3g' | '4g';
+  rtt?: number;
+  saveData?: boolean;
+  type?: 'bluetooth' | 'cellular' | 'ethernet' | 'wifi' | 'wimax' | 'none' | 'other' | 'unknown';
+}
+
+function getConnection(): NetworkStatus {
+  if (typeof navigator === 'undefined') {
+    return {};
+  }
+
+  const _navigator = navigator as any;
+  const connection: any =
+    _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
+
+  if (!connection) {
+    return {};
+  }
+
+  return {
+    downlink: connection?.downlink,
+    downlinkMax: connection?.downlinkMax,
+    effectiveType: connection?.effectiveType,
+    rtt: connection?.rtt,
+    saveData: connection?.saveData,
+    type: connection?.type,
   };
+}
+
+export default function useNetwork() {
+  const [status, setStatus] = useState<{ online: boolean } & NetworkStatus>({
+    online: true,
+  });
+  const handleConnectionChange = useCallback(
+    () => setStatus((current) => ({ ...current, ...getConnection() })),
+    [],
+  );
+
+  useWindowEvent('online', () => setStatus({ online: true, ...getConnection() }));
+  useWindowEvent('offline', () => setStatus({ online: false, ...getConnection() }));
 
   useEffect(() => {
-    window.addEventListener('online', handleChange);
-    window.addEventListener('offline', handleChange);
-    () => {
-      window.removeEventListener('online', handleChange);
-      window.removeEventListener('offline', handleChange);
-    };
+    const _navigator = navigator as any;
+
+    if (_navigator.connection) {
+      setStatus({ online: _navigator.onLine, ...getConnection() });
+      _navigator.connection.addEventListener('change', handleConnectionChange);
+      return () => _navigator.connection.removeEventListener('change', handleConnectionChange);
+    }
+
+    return undefined;
   }, []);
+
   return status;
 }

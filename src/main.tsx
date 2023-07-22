@@ -1,11 +1,7 @@
 import ReactDOM from 'react-dom/client';
 
 function App() {
-  return (
-    <>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-    </>
-  );
+  return <>123</>;
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
