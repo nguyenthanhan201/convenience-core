@@ -1,4 +1,4 @@
-export function useSEO(
+export default function useSEO(
   title: string,
   data: { description?: string; image?: string; keyword?: string; shopName?: string } = {},
 ) {

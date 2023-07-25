@@ -1,6 +1,6 @@
 import { useDeferredValue, useMemo } from 'react';
 
-import { isArray } from './utils';
+import { isArray } from '../utils';
 
 interface SelectOption {
   label: string;
