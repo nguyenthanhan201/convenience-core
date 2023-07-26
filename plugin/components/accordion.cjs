@@ -1,0 +1,1 @@
+module.exports = {".accordion-header":{"@apply flex flex-row gap-2 items-center":true},".accordion-header-text":{"@apply text-sm font-semibold text-text-500 flex-shrink-0 mr-5 ml-5":true},".accordion-border":{"@apply border border-solid border-lineBorder-borderDefault w-full h-[0.5px] flex-1":true},".accordion-body":{"@apply mb-5 mt-5":true}};

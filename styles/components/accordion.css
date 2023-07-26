@@ -1,0 +1,15 @@
+.accordion-header {
+    @apply flex flex-row gap-2 items-center
+}
+
+.accordion-header-text {
+    @apply text-sm font-semibold text-text-500 flex-shrink-0 mr-5 ml-5
+}
+
+.accordion-border {
+    @apply border border-solid border-lineBorder-borderDefault w-full h-[0.5px] flex-1
+}
+
+.accordion-body {
+    @apply mb-5 mt-5
+}
