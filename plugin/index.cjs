@@ -15,5 +15,5 @@ module.exports = plugin(
     });
     addUtilities({ ...utilities });
   },
-  { theme: theme },
+  { theme: { extend: { ...theme } } },
 );

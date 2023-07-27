@@ -5,17 +5,17 @@ import path from 'path';
 import postcss from 'postcss';
 import postcssJs from 'postcss-js';
 
-const tailwindCSS = fs.readFileSync('tailwind.config.cjs', 'utf8');
+// const tailwindCSS = fs.readFileSync('tailwind.config.cjs', 'utf8');
 
-async function parseTailwindThemeToJS() {
-  const themeContent = await postcss().process(tailwindCSS, { from: undefined });
+// async function parseTailwindThemeToJS() {
+//   const themeContent = await postcss().process(tailwindCSS, { from: undefined });
 
-  const cleanedTheme = parseTheme(themeContent.css);
+//   const cleanedTheme = parseTheme(themeContent.css);
 
-  let output = 'module.exports = ' + JSON.stringify(cleanedTheme, null, 0) + ';';
+//   let output = 'module.exports = ' + JSON.stringify(cleanedTheme, null, 0) + ';';
 
-  await outputFileSync('plugin/theme.cjs', output);
-}
+//   await outputFileSync('plugin/theme.cjs', output);
+// }
 
 const PARSE_CSS = [
   { source: path.join('styles', 'base.css'), outDir: 'plugin' },
@@ -23,9 +23,7 @@ const PARSE_CSS = [
   { source: path.join('styles', 'components'), outDir: path.join('plugin', 'components') },
 ];
 
-parseTailwindThemeToJS().then(() => {
-  doParse(PARSE_CSS);
-});
+doParse(PARSE_CSS);
 
 function isDirectory(_path) {
   const stat = fs.statSync(_path);
@@ -56,27 +54,27 @@ function processParse(file, { outDir }) {
   outputFileSync(finalFile, output);
 }
 
-function parseTheme(content) {
-  return JSON.parse(
-    content
-      // Function to remove JavaScript comments from the string
-      .replace(/(\/\*[\s\S]*?\*\/|\/\/.*$)/gm, '')
-      // Extract the object part of the string by removing "module.exports = "
-      .replace(/module.exports\s*=\s*/, '')
-      // Replace the '-10' keys with strings (e.g., 'minus-10') to make it valid JSON
-      .replace(/(['"])?([a-z0-9A-Z_-]+)(['"])?:/g, '"$2":')
-      // Remove newlines and spaces
-      .replace(/\n\s*/g, '')
-      // Remove trailing commas
-      .replace(/,\s*}/g, '}')
-      // Remove single quotes
-      .replace(/'/g, '"')
-      // Remove semicolons
-      .replace(/;/g, '')
-      .replace('const plugin = require("./plugin/index.cjs")', '')
-      .replace(',"plugins": [plugin]', ''),
-  ).theme;
-}
+// function parseTheme(content) {
+//   const _content = content
+//     // Function to remove JavaScript comments from the string
+//     .replace(/(\/\*[\s\S]*?\*\/|\/\/.*$)/gm, '')
+//     // Extract the object part of the string by removing "module.exports = "
+//     .replace(/module.exports\s*=\s*/, '')
+//     // Replace the '-10' keys with strings (e.g., 'minus-10') to make it valid JSON
+//     .replace(/(['"])?([a-z0-9A-Z_-]+)(['"])?:/g, '"$2":')
+//     // Remove newlines and spaces
+//     .replace(/\n\s*/g, '')
+//     // Remove trailing commas
+//     .replace(/,\s*}/g, '}')
+//     // Remove single quotes
+//     .replace(/'/g, '"')
+//     // Remove semicolons
+//     .replace(/;/g, '')
+//     .replace('const plugin = require("./plugin/index.cjs")', '')
+//     .replace('plugins: [plugin],', '');
+
+//   return JSON.parse(_content).theme;
+// }
 
 function doParse(sources) {
   sources.forEach(({ source: fileOrFolder, outDir }) => {
