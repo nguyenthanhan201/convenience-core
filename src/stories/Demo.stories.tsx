@@ -1,7 +1,7 @@
 import type { ComponentStory, Meta } from '@storybook/react';
 
 import { Demo } from './demos/useCopy';
-import Document from './mdx/useClickOutside.mdx';
+import Document from './mdx/components/Popover.mdx';
 
 const meta: Meta = {
   title: 'Hooks/useClickOutside',

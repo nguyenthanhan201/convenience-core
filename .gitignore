@@ -29,7 +29,6 @@ dist-ssr
 ### StorybookJs ###
 storybook-static/
 
-*.tgz
 *.tsbuildinfo
 tsconfig.build.tsbuildinfo
 /.idea

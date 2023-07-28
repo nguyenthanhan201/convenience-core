@@ -1,27 +1,24 @@
-import './index.css';
+import '../mdx.css';
 
-import { ElementRef, useRef } from 'react';
-import ReactDOM from 'react-dom/client';
+<div className="sb-container">
+<div>
+# Usage
 
+```jsx
 import { Popover, usePopover } from './lib/components/Popover';
 
 function App() {
-  const h1Ref = useRef<ElementRef<'h1'>>(null);
-  const divRef = useRef<ElementRef<'div'>>(null);
+  const divRef = useRef < ElementRef < 'div' >> null;
   const { onOpen: onOpenPopover1, ...popoverProps1 } = usePopover();
 
   return (
     <>
-      <div ref={h1Ref} className='text-3xl font-bold underline card shadow-modal text-h1'>
-        Hello world!
-      </div>
       <button onClick={onOpenPopover1}>Open Popover</button>
       <Popover {...popoverProps1} placement='bottom-start' dismissDivs={[divRef.current]}>
-        toi la ai
+        content popover
       </Popover>
       <div
         ref={divRef}
-        id='oki'
         className='grid place-items-center bg-background-scrim z-modal fixed bottom-0'
       >
         123123123
@@ -29,9 +26,24 @@ function App() {
     </>
   );
 }
+```
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  // <React.StrictMode>
-  <App />,
-  // </React.StrictMode>,
-);
+# API
+
+Component accepts 7 arguments:
+
+<ul>
+  <li>
+    <code>dismissDivs</code> – array of nodes that should not trigger outside click event
+  </li>
+</ul>
+
+</div>
+
+<div className="sb-table__content">
+<ul>
+<li>[Usage](#usage) </li>
+<li>[API](#api)</li>
+</ul>
+</div>
+</div>

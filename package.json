@@ -11,7 +11,7 @@
     "lint": "yarn lint:format && yarn lint:fix",
     "preview": "vite preview",
     "bundle-local": "npm run build && npm pack",
-    "reinstall-ds": "rm -rf ./node_modules/my-package && npm cache clean pacote:tarball:file:react-core-1.0.0.tgz && npm install my-package",
+    "reinstall-ds": "rm -rf ./node_modules/my-package && npm cache clean pacote:tarball:file:convenience-core-1.0.0 && npm install my-package",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -31,7 +31,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "fs-readdir-recursive": "^1.1.0",
     "js-cookie": "^3.0.5",
-    "my-package": "file:react-core-1.0.0.tgz",
+    "my-package": "file:convenience-core-1.0.0",
     "output-file-sync": "^2.0.1",
     "vite-plugin-dts": "^3.3.1"
   },

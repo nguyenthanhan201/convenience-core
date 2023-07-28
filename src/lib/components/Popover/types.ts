@@ -8,4 +8,5 @@ export interface PopoverProps extends PropsWithChildren {
   onClose: () => void;
   placement?: Placement;
   sizeMiddleware?: boolean;
+  dismissDivs?: HTMLElement[];
 }

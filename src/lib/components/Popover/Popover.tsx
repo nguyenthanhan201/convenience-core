@@ -16,7 +16,15 @@ import { useEffect, useMemo } from 'react';
 import { PopoverProps } from './types';
 
 export default function Popover(props: PopoverProps) {
-  const { open, onClose, placement = 'bottom-end', children, sizeMiddleware, anchorEl } = props;
+  const {
+    open,
+    onClose,
+    placement = 'bottom-end',
+    children,
+    sizeMiddleware,
+    anchorEl,
+    dismissDivs,
+  } = props;
 
   const middleware = useMemo(() => {
     const _middleware = [offset(5), flip(), shift()];
@@ -41,9 +49,8 @@ export default function Popover(props: PopoverProps) {
   const { getFloatingProps } = useInteractions([
     useDismiss(context, {
       outsidePress: (e) => {
-        const divs: Element[] = [...document.querySelectorAll('#oki')];
-        if (divs.length <= 0) return false;
-        return !divs.some((divRef) => divRef.contains(e.target as Node));
+        if (!dismissDivs || dismissDivs.length <= 0) return false;
+        return !dismissDivs.some((div) => div.contains(e.target as Node));
       },
     }),
   ]);
