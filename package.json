@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
+  "release": {
+    "branches": [
+      "release"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
