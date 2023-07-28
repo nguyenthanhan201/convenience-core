@@ -13,9 +13,7 @@ function useGeolocation() {
     } as GeolocationPosition);
   };
 
-  const onError = (error: GeolocationPositionError) => {
-    console.error(error);
-  };
+  const onError = (_error: GeolocationPositionError) => {};
 
   useEffect(() => {
     const _watchId = navigator.geolocation.watchPosition(onChange, onError, {
