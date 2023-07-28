@@ -2,7 +2,7 @@
   "name": "convenience-core",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
+  "description": "https://github.com/nguyenthanhan201/convenience-core",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -20,7 +20,7 @@
   },
   "author": "An Nguyen",
   "license": "ISC",
-  "repository": "https://github.com/mantinedev/mantine.git",
+  "repository": "https://github.com/nguyenthanhan201/convenience-core",
   "peerDependencies": {
     "react": "18.x",
     "react-dom": "18.x"
