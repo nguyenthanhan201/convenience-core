@@ -4,7 +4,7 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on:
   push:
-    branches: [main]
+    branches: [release-storybook]
 
 # List of jobs
 jobs:
@@ -24,3 +24,5 @@ jobs:
           #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm run build-storybook && npx chromatic --project-token=chpt_72f4bd64f38337b
+        #👇 Adds Chromatic as a step in the workflow
