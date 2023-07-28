@@ -21,8 +21,8 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: resolve(__dirname, 'src/lib/index.ts'),
-      name: 'react-core',
-      fileName: (format) => `react-core.${format}.js`,
+      name: 'convenience-core',
+      fileName: (format) => `convenience-core.${format}.js`,
       formats: ['es', 'umd'],
     },
     rollupOptions: {

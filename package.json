@@ -1,5 +1,5 @@
 {
-  "name": "react-core",
+  "name": "convenience-core",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -18,15 +18,15 @@
     "chromatic": "npx chromatic --project-token=chpt_72f4bd64f38337b",
     "parse-css": "node scripts/parse-css-to-js.mjs"
   },
-  "author": {
-    "name": "An Nguyen"
-  },
+  "author": "An Nguyen",
   "license": "ISC",
+  "repository": "https://github.com/mantinedev/mantine.git",
   "peerDependencies": {
     "react": "18.x",
     "react-dom": "18.x"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.24.8",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "fs-readdir-recursive": "^1.1.0",
@@ -74,22 +74,17 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
-  "homepage": "",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "files": [
     "dist",
     "plugin"
   ],
-  "main": "./dist/react-core.umd.js",
-  "module": "./dist/react-core.es.js",
+  "main": "./dist/convenience-core.umd.js",
+  "module": "./dist/convenience-core.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/react-core.es.js",
-      "require": "./dist/react-core.umd.js"
+      "import": "./dist/convenience-core.es.js",
+      "require": "./dist/convenience-core.umd.js"
     },
     "./plugin": "./plugin/index.cjs"
   }

@@ -1,4 +1,4 @@
-# @react/core
+# convenience-core
 
 ## Environment
 
@@ -7,6 +7,10 @@
 - VSCode
 - Eslint plugin
 - Prettier plugin
+
+## APIs and Documentation
+
+- [Docs](https://64bf37424f81a4740ee9232d-zspyhumslt.chromatic.com/)
 
 ## Code base Structure
 
