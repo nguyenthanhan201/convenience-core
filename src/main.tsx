@@ -1,9 +1,8 @@
 import './index.css';
 
+import { Popover, usePopover } from 'my-package';
 import { ElementRef, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
-
-import { Popover, usePopover } from './lib/components/Popover';
 
 function App() {
   const h1Ref = useRef<ElementRef<'h1'>>(null);
