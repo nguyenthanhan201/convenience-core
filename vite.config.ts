@@ -1,3 +1,4 @@
+import terser from '@rollup/plugin-terser';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
@@ -10,6 +11,16 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
     }),
+    terser({
+      ecma: 2015,
+      mangle: { toplevel: true },
+      compress: {
+        toplevel: true,
+        drop_console: true,
+        drop_debugger: true,
+      },
+      output: { quote_style: 1 },
+    }) as any,
   ],
   resolve: {
     alias: {

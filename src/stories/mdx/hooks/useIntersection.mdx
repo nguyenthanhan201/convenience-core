@@ -1,8 +1,13 @@
-import './index.css';
+import '../mdx.css';
+import IntersectionImg from '../../assets/Intersection.webp';
 
+<div className="sb-container">
+<div>
+# Usage
+
+```jsx
 import { useDebounce, useIntersection, useLoading } from 'my-package';
 import { useEffect, useRef, useState } from 'react';
-import ReactDOM from 'react-dom/client';
 
 function App() {
   const [selected, setSelected] = useState(0);
@@ -93,9 +98,38 @@ function App() {
     </div>
   );
 }
+```
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  // <React.StrictMode>
-  <App />,
-  // </React.StrictMode>,
-);
+# API
+
+Hook accepts 2 arguments:
+
+<ul>
+  <li>
+    <code>elementRef</code> – React <code>ref</code> object that should be passed to element on
+    which intersection should be tracked
+  </li>
+  <li>
+    <code>options</code> – object with <code>threshold</code> and <code>rootMargin</code> properties
+  </li>
+</ul>
+<img src={IntersectionImg} alt='IntersectionImg' />
+
+# Debugger
+
+Import the script from your html:
+
+```bash
+<script src="https://unpkg.com/intersection-observer-debugger"></script>
+```
+
+</div>
+
+<div className="sb-table__content">
+<ul>
+<li>[Usage](#usage) </li>
+<li>[API](#api)</li>
+<li>[Debugger](#debugger)</li>
+</ul>
+</div>
+</div>
