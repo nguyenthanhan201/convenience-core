@@ -2,7 +2,7 @@
 
 ## Environment
 
-- Node - v16
+- Node - v18.12.0
 - Yarn v1
 - VSCode
 - Eslint plugin
@@ -19,7 +19,8 @@
 
 * Folder src/lib will be exported
 
-- src/demos: contains all demo components
+<!-- - src/demos: contains all demo components -->
+
 - src/stories: contains all storybook file
 
 - styles/components: contains all css style for components, which be used to parse to cjs file, which will be used to build tailwind plugin
@@ -32,13 +33,6 @@
 - [Jenkins vs Github Action](https://www.youtube.com/watch?v=Gpl_usE_BWM&t=696s)
 - [Networking](docs/release.md)
 - [Reference](docs/reference.md)
-
-## Deploy Storybook
-
-```
-npm run chromatic
-```
-
 - [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/)
 
 ## After completing the development, run:
@@ -46,7 +40,7 @@ npm run chromatic
 `yarn parse-css` to parse _.css to _.cjs file,
 Then, go to the 'plugin/index.cjs' file, import the component that you've just developed into addComponent section.
 
-### Release new version
+## Release new version
 
-- Create Merge Request to `main` branch. The release branch will trigger CI/CD process after change.
-- To release new version, you have to commit with prefix ( fix(pencil): , feat(pencil):, perf(pencil):, ...). More info: https://github.com/semantic-release/semantic-release
+- Create Merge Request to `master` branch. The release branch will trigger CI/CD process after change (this action will public package). To release new version, you have to commit with prefix ( fix(pencil): , feat(pencil):, perf(pencil):, ...). More info: https://github.com/semantic-release/semantic-release
+- Create Merge Request to `release-storybook` branch. The release branch will trigger CI/CD process after change (this action will public storybook).

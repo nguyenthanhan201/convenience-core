@@ -1,0 +1,53 @@
+import '../mdx.css';
+
+<div className="sb-container">
+<div>
+# Usage
+
+```jsx
+import useAsync from './useAsync';
+
+export default function AsyncComponent() {
+  const { loading, error, value } = useAsync(() => {
+    return new Promise((resolve, reject) => {
+      const success = false;
+      setTimeout(() => {
+        success ? resolve('Hi') : reject('Error');
+      }, 1000);
+    });
+  });
+
+  return (
+    <div>
+      <div>Loading: {loading.toString()}</div>
+      <div>{error}</div>
+      <div>{value}</div>
+    </div>
+  );
+}
+```
+
+# API
+
+Hook accepts 2 arguments:
+
+<ul>
+  <li>
+    <code>callback</code> – async function call result of which will be stored in <code>value</code>{' '}
+    variable
+  </li>
+  <li>
+    <code>dependencies</code> – array of dependencies, hook will be called again if any of these
+    values change
+  </li>
+</ul>
+
+</div>
+
+<div className="sb-table__content">
+<ul>
+<li>[Usage](#usage) </li>
+<li>[API](#api)</li>
+</ul>
+</div>
+</div>
