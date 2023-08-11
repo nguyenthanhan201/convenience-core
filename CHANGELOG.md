@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.4.0...v1.5.0) (2023-08-11)
+
+
+### Features
+
+* update readme ([5302ccd](https://github.com/nguyenthanhan201/convenience-core/commit/5302ccd1d89149817218fa3a40ff20a9620567c9))
+
 # [1.4.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.3.3...v1.4.0) (2023-07-28)
 
 
