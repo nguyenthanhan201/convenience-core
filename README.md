@@ -10,7 +10,7 @@
 
 ## APIs and Documentation
 
-- [Docs](https://64bf37424f81a4740ee9232d-bngnquxqde.chromatic.com)
+- [Docs](https://64bf37424f81a4740ee9232d-mbbtuxbont.chromatic.com)
 
 ## Code base Structure
 
