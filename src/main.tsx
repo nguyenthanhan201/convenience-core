@@ -62,15 +62,15 @@ function App() {
   }, []);
 
   return (
-    <div className='flex p-6 gap-4'>
-      <div className='w-3/4 flex flex-col gap-4'>
+    <div className='p-4 pt-2'>
+      <div className='flex w-3/4 flex-col gap-4'>
         {steps.map((step, index) => (
           <div key={index} ref={step.ref} className='h-[500px] bg-gray-500'>
             {index + 1}
           </div>
         ))}
       </div>
-      <div className='w-1/4 sticky top-0 h-fit'>
+      <div className='sticky top-0 h-fit w-1/4'>
         <h3>Table of contents</h3>
         <ul>
           {Array(4)
