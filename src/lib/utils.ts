@@ -116,6 +116,13 @@ function mergeRefs<T = any>(
   };
 }
 
+const omit = <T, K extends keyof T>(obj: T, ...keys: K[]): Omit<T, K> => {
+  const keySet = new Set(keys);
+  return Object.fromEntries(
+    Object.entries(obj as Array<string>).filter(([k]) => !keySet.has(k as K)),
+  ) as Omit<T, K>;
+};
+
 // function createUUID(prefix = 'jf-uuid') {
 //   let count = 0;
 //   return () => {
@@ -151,4 +158,5 @@ export {
   isVisible,
   mergeRefs,
   noop,
+  omit,
 };

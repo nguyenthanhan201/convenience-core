@@ -1,96 +1,113 @@
 import './index.css';
 
-import { useDebounce, useIntersection, useLoading } from 'my-package';
-import { useEffect, useRef, useState } from 'react';
+import { useMemo, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
-function App() {
-  const [selected, setSelected] = useState(0);
-  const { isLoading, startLoading, stopLoading } = useLoading();
+import {
+  PlayerState,
+  VideoJsBaseOptions,
+  VideoOptions,
+  VideoSourcesAndTracksOptions,
+} from './lib/components/Video/types';
+import VideoPlayer from './lib/components/Video/Video';
 
-  const [steps] = useState<any[]>(
-    Array(4)
-      .fill(0)
-      .map((item) => ({
-        id: item,
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        ref: useRef<HTMLDivElement>(null),
-      })),
-  );
-
-  const listEntries = steps.map((step) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    return useIntersection(step.ref, {
-      threshold: 0.9,
-      rootMargin: '-24px 0px -24px 0px',
-    });
+function uuid(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    // eslint-disable-next-line no-bitwise
+    const r = (Math.random() * 16) | 0;
+    // eslint-disable-next-line no-bitwise
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
   });
+}
 
-  const handleScroll = useDebounce(() => {
-    stopLoading();
-  }, 1000);
-
-  useEffect(() => {
-    if (steps[selected].ref?.current) {
-      steps[selected].ref?.current?.scrollIntoView({
-        block: 'center',
-        behavior: 'smooth',
-      });
-    }
-  }, [selected]);
-
-  useEffect(() => {
-    if (isLoading) return;
-    switch (true) {
-      case listEntries[0]?.isIntersecting:
-        return setSelected(0);
-      case listEntries[1]?.isIntersecting:
-        return setSelected(1);
-      case listEntries[2]?.isIntersecting:
-        return setSelected(2);
-      case listEntries[3]?.isIntersecting:
-        return setSelected(3);
-    }
-  }, [listEntries[0], listEntries[1], listEntries[2], listEntries[3]]);
-
-  useEffect(() => {
-    addEventListener('scroll', handleScroll);
-
-    return () => {
-      removeEventListener('scroll', handleScroll);
+function App() {
+  const [videoState, setVideoState] = useState<PlayerState>();
+  const [uid, setUid] = useState(uuid());
+  const sourceAndTrackOptions: VideoSourcesAndTracksOptions = useMemo(
+    () => ({
+      sources: [
+        {
+          src: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
+          type: 'application/x-mpegURL',
+        },
+        {
+          src: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
+          type: 'application/x-mpegURL',
+        },
+      ],
+      tracks: [
+        {
+          src: 'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          language: 'no',
+          srcLang: 'no',
+          label: 'Norwegian',
+          kind: 'captions',
+        },
+        {
+          src: 'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          language: 'en',
+          srcLang: 'en',
+          label: 'English',
+          kind: 'captions',
+        },
+      ],
+    }),
+    [],
+  );
+  const videoJsBaseOptions: VideoJsBaseOptions = useMemo(() => {
+    const opts: VideoJsBaseOptions = {
+      poster: 'https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg',
+      preload: 'auto',
+      autoplay: false,
+      controls: true,
+      responsive: true,
+      fluid: true,
+      //defaultVolume: 0,
+      controlBar: {
+        pictureInPictureToggle: false,
+      },
+      muted: true,
     };
+    return opts;
   }, []);
 
+  const videoJsOptions: VideoOptions = useMemo(
+    () => ({
+      ...videoJsBaseOptions,
+      ...sourceAndTrackOptions,
+    }),
+    [videoJsBaseOptions, sourceAndTrackOptions, uid],
+  );
+
+  const [captionLanguage, setCaptionLanguage] = useState<string>();
+
   return (
-    <div className='flex p-6 gap-4'>
-      <div className='w-3/4 flex flex-col gap-4'>
-        {steps.map((step, index) => (
-          <div key={index} ref={step.ref} className='h-[500px] bg-gray-500'>
-            {index + 1}
-          </div>
-        ))}
+    <>
+      <h1>VideoJS Test</h1>
+      <div style={{ maxWidth: '700px' }}>
+        <VideoPlayer
+          options={videoJsOptions}
+          onPlayerStateChanged={(state: PlayerState): void => setVideoState(state)}
+          onCaptionLanguageChanged={(lang) => setCaptionLanguage(lang)}
+          captionLanguage={captionLanguage}
+        />
       </div>
-      <div className='w-1/4 sticky top-0 h-fit'>
-        <h3>Table of contents</h3>
-        <ul>
-          {Array(4)
-            .fill(0)
-            .map((_, index) => (
-              <li key={index}>
-                <button
-                  className={selected === index ? 'bg-blue-500 text-white' : 'bg-white text-black'}
-                  onClick={() => {
-                    startLoading();
-                    setSelected(index);
-                  }}
-                >
-                  Go to {index + 1}
-                </button>
-              </li>
-            ))}
-        </ul>
-      </div>
-    </div>
+      <button type='button' onClick={() => setUid(uuid())}>
+        reset options
+      </button>
+      <button
+        type='button'
+        onClick={() => {
+          return setCaptionLanguage(
+            captionLanguage === 'en' ? undefined : captionLanguage === 'no' ? 'en' : 'no',
+          );
+        }}
+      >
+        toggle lang
+      </button>
+      <pre>{JSON.stringify(videoState, null, 2)}</pre>
+    </>
   );
 }
 

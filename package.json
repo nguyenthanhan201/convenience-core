@@ -11,13 +11,14 @@
     "lint": "yarn lint:format && yarn lint:fix",
     "preview": "vite preview",
     "bundle-local": "node scripts/bundle-local.mjs",
-    "reinstall-ds": "rm -rf ./node_modules/my-package && npm cache clean pacote:tarball:file:convenience-core-1.0.0 && npm install my-package",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_72f4bd64f38337b",
     "parse-css": "node scripts/parse-css-to-js.mjs",
-    "echo": "echo jf-design-system-$(npm -s run version --silent --json | jq -r '.version').tgz convenience-core-$(npm -s run version --silent --json | jq -r '.version').tgz"
+    "echo": "echo jf-design-system-$(npm -s run version --silent --json | jq -r '.version').tgz convenience-core-$(npm -s run version --silent --json | jq -r '.version').tgz",
+    "reinstall-ds": "rm -rf ./node_modules/my-package && npm cache clean pacote:tarball:file:convenience-core-1.0.0 && npm install my-package",
+    "reinstall": "rm -rf ./node_modules && rm -rf package-lock.json && npm install"
   },
   "author": "An Nguyen",
   "license": "ISC",
@@ -35,6 +36,8 @@
     "js-cookie": "^3.0.5",
     "my-package": "file:convenience-core-1.0.0.tgz",
     "output-file-sync": "^2.0.1",
+    "typesafe-actions": "^5.1.0",
+    "video.js": "7.14.3",
     "vite-plugin-dts": "^3.3.1"
   },
   "devDependencies": {
@@ -54,6 +57,7 @@
     "@types/js-cookie": "^3.0.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@types/video.js": "^7.3.52",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "@vitejs/plugin-react": "^4.0.3",
