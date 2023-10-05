@@ -1,11 +1,11 @@
-import Cookies, { CookieAttributes } from 'js-cookie';
+import Cookies, { CookieAttributes } from 'https://cdn.skypack.dev/js-cookie@^3.0.5';
 
 export enum CookiesKeys {
   'eLynet_user_info' = 'eLynet_user_info',
   'eLynet_seller_info' = 'eLynet_seller_info',
 }
 
-export const getCookie = (name: CookiesKeys) => {
+export const getCookie = (name: string) => {
   return JSON.parse(Cookies.get(name) || '{}');
 };
 export const setCookie = <T>(name: string, value: T, options?: CookieAttributes) => {
@@ -34,7 +34,7 @@ export function getCookieExpirationTime(cookieName: string) {
   return null; // Cookie not found or expiration time not set
 }
 
-function useCookie(key: CookiesKeys) {
+function useCookie(key: string) {
   return {
     get: () => getCookie(key),
     set: (value: string, options?: CookieAttributes) => setCookie(key, value, options),

@@ -1,3 +1,5 @@
+// https://bundlephobia.com
+// https://www.skypack.dev
 import terser from '@rollup/plugin-terser';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';

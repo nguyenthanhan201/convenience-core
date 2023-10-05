@@ -1,4 +1,3 @@
-// eslint-disable-next-line simple-import-sort/exports
 export { default as useClickOutside } from './useClickOutside';
 export { default as useCookie } from './useCookie';
 export { default as useCopy } from './useCopy';
@@ -8,6 +7,7 @@ export { default as useDebounce } from './useDebounce';
 export { default as useDevice } from './useDevice';
 export { default as useFilterOptions } from './useFilterOptions';
 export { default as useGeolocation } from './useGeolocation';
+export { default as useInput } from './useInput';
 export { default as useIntersection } from './useIntersection';
 export { default as useInterval } from './useInterval';
 export { default as useLoading } from './useLoading';
@@ -16,13 +16,13 @@ export { default as useNetWork } from './useNetwork';
 export { default as useOnScreen } from './useOnScreen';
 export { default as usePagination } from './usePagination';
 export { default as usePrevious } from './usePrevious';
-export { default as useSEO } from './useSEO';
 export { default as useScreen } from './useScreen';
 export { default as useScript } from './useScript';
 export { default as useScrollBlock } from './useScrollBlock';
+export { default as useSEO } from './useSEO';
 export { default as useTabs } from './useTabs';
 export { default as useToggle } from './useToggle';
-export { default as useUUID } from './useUUID';
 export { default as useUncontrolled } from './useUncontrolled';
+export { default as useUUID } from './useUUID';
 export { default as useValueRef } from './useValueRef';
 export { default as useWindowEvent } from './useWindowEvent';
