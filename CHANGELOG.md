@@ -1,3 +1,18 @@
+# [1.6.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.5.0...v1.6.0) (2023-10-05)
+
+
+### Bug Fixes
+
+* fix husky on mac ([569f220](https://github.com/nguyenthanhan201/convenience-core/commit/569f220068475b29cd647b0d43f117c936ae0749))
+* remove rule commitlint max length ([d285e17](https://github.com/nguyenthanhan201/convenience-core/commit/d285e173a86a67c855e73eecc928991a369f0fab))
+
+
+### Features
+
+* add skypack ([b564f4f](https://github.com/nguyenthanhan201/convenience-core/commit/b564f4ffbbe98f2c950f092ea2f456e1542500fa))
+* update package ([4975370](https://github.com/nguyenthanhan201/convenience-core/commit/49753700cf2735646d939c04b9386781f8cc940e))
+* update package to version 1.6.0 ([c7c1435](https://github.com/nguyenthanhan201/convenience-core/commit/c7c1435eb410291d82609f65472ff4eedb7ddad2))
+
 # [1.5.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.4.0...v1.5.0) (2023-08-11)
 
 ### Features
