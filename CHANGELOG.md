@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.0...v1.6.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* remove unuse package ([ed58aa4](https://github.com/nguyenthanhan201/convenience-core/commit/ed58aa44535889b173531ea2b6195d2c14e5a96b))
+
 # [1.6.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.5.0...v1.6.0) (2023-10-05)
 
 
