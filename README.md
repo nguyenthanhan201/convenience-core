@@ -1,5 +1,7 @@
 # convenience-core
 
+<!-- "my-package": "file:convenience-core-1.0.0.tgz", -->
+
 ## Environment
 
 - Node - v18.12.0
