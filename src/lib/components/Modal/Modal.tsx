@@ -28,8 +28,8 @@ const Modal = (props: ModalProps) => {
 
   return (
     <FloatingPortal id='portal-root'>
-      {open && (
-        <FloatingOverlay lockScroll className={''} style={{ overflow: 'hidden' }}>
+      {open ? (
+        <FloatingOverlay className='' lockScroll style={{ overflow: 'hidden' }}>
           <FloatingFocusManager context={context}>
             <div ref={refs.setFloating} {...getFloatingProps()}>
               <div className={clsx('', className)} {...restProps}>
@@ -38,7 +38,7 @@ const Modal = (props: ModalProps) => {
             </div>
           </FloatingFocusManager>
         </FloatingOverlay>
-      )}
+      ) : null}
     </FloatingPortal>
   );
 };

@@ -1,26 +1,23 @@
 # [1.5.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.4.0...v1.5.0) (2023-08-11)
 
-
 ### Features
 
-* update readme ([5302ccd](https://github.com/nguyenthanhan201/convenience-core/commit/5302ccd1d89149817218fa3a40ff20a9620567c9))
+- update readme ([5302ccd](https://github.com/nguyenthanhan201/convenience-core/commit/5302ccd1d89149817218fa3a40ff20a9620567c9))
 
 # [1.4.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.3.3...v1.4.0) (2023-07-28)
 
-
 ### Bug Fixes
 
-* add master branch ([c69b281](https://github.com/nguyenthanhan201/convenience-core/commit/c69b281387e6672229c5fb0fd5fae636d1015d4b))
-* branch ([77daf87](https://github.com/nguyenthanhan201/convenience-core/commit/77daf877bc026feab1d2ed9beda947629e5f56c9))
-* fix CI/CD ([1cf372a](https://github.com/nguyenthanhan201/convenience-core/commit/1cf372af968f1dfa48ebd475e3d06e68e25bbf95))
-* fix repo ([0bc4255](https://github.com/nguyenthanhan201/convenience-core/commit/0bc42555cd4ea5e73a995955e13058aa942e2fee))
-* update file release ([2ecad99](https://github.com/nguyenthanhan201/convenience-core/commit/2ecad99cf1094609bf9c7846b64639658c076340))
-* update file release ([258cd79](https://github.com/nguyenthanhan201/convenience-core/commit/258cd79ef0e087d0cc387aa3c19ba80f15a1fb27))
-
+- add master branch ([c69b281](https://github.com/nguyenthanhan201/convenience-core/commit/c69b281387e6672229c5fb0fd5fae636d1015d4b))
+- branch ([77daf87](https://github.com/nguyenthanhan201/convenience-core/commit/77daf877bc026feab1d2ed9beda947629e5f56c9))
+- fix CI/CD ([1cf372a](https://github.com/nguyenthanhan201/convenience-core/commit/1cf372af968f1dfa48ebd475e3d06e68e25bbf95))
+- fix repo ([0bc4255](https://github.com/nguyenthanhan201/convenience-core/commit/0bc42555cd4ea5e73a995955e13058aa942e2fee))
+- update file release ([2ecad99](https://github.com/nguyenthanhan201/convenience-core/commit/2ecad99cf1094609bf9c7846b64639658c076340))
+- update file release ([258cd79](https://github.com/nguyenthanhan201/convenience-core/commit/258cd79ef0e087d0cc387aa3c19ba80f15a1fb27))
 
 ### Features
 
-* add Popover anh update storybook ([4800c2c](https://github.com/nguyenthanhan201/convenience-core/commit/4800c2c5e643242bd9920539f7265bf60bb80da8))
+- add Popover anh update storybook ([4800c2c](https://github.com/nguyenthanhan201/convenience-core/commit/4800c2c5e643242bd9920539f7265bf60bb80da8))
 
 ## [1.3.3](https://github.com/nguyenthanhan201/typescript-hooks/compare/v1.3.2...v1.3.3) (2023-07-21)
 
