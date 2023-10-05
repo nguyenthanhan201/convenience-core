@@ -63,14 +63,14 @@ export default function Popover(props: PopoverProps) {
 
   return (
     <FloatingPortal id='portal-root'>
-      {open && (
+      {open ? (
         <FloatingOverlay className='z-popover' lockScroll>
           <FloatingFocusManager
             context={context}
-            modal={false}
-            returnFocus={false}
-            order={['reference', 'content']}
             initialFocus={0}
+            modal={false}
+            order={['reference', 'content']}
+            returnFocus={false}
           >
             <div
               ref={refs.setFloating}
@@ -85,7 +85,7 @@ export default function Popover(props: PopoverProps) {
             </div>
           </FloatingFocusManager>
         </FloatingOverlay>
-      )}
+      ) : null}
     </FloatingPortal>
   );
 }

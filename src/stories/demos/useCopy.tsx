@@ -2,19 +2,21 @@ import { useState } from 'react';
 
 import { useClickOutside } from '../../lib';
 
-export function Demo() {
+export const Demo = () => {
   const [opened, setOpened] = useState(false);
   const ref = useClickOutside(() => setOpened(false));
 
   return (
     <>
-      <button onClick={() => setOpened(true)}>Open dropdown</button>
+      <button onClick={() => setOpened(true)} type='button'>
+        Open dropdown
+      </button>
 
-      {opened && (
+      {opened ? (
         <div ref={ref}>
           <span>Click outside to close</span>
         </div>
-      )}
+      ) : null}
     </>
   );
-}
+};
