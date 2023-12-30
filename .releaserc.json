@@ -28,7 +28,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "./scripts/publishPkg.mjs ${nextRelease.version} ${branch.name} ${commits.length} ${Date.now()}"
+        "prepareCmd": "./scripts/publishPkg.mjs --access public"
       }
     ]
   ]
