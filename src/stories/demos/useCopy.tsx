@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useClickOutside } from '../../lib';
+import { useClickOutside } from '@/package/useClickOutSide';
 
 export const Demo = () => {
   const [opened, setOpened] = useState(false);
