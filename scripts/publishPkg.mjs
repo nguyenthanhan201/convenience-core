@@ -5,7 +5,7 @@
 import fse from 'fs-extra';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { cd, echo } from 'zx';
+import { echo } from 'zx';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,8 +18,8 @@ async function publishPkgNah() {
     await cpBasePkgJson();
     await Promise.all(['./CHANGELOG.md', './README.md'].map(cpBaseFiles));
     await Promise.all(['./plugin'].map(cpBaseFolder));
-    cd(buildPath);
-    echo('Publishing...');
+    // cd(buildPath);
+    // echo('Publishing...');
     // await $`npm publish`;
     // echo('Published!');
   } catch (error) {
