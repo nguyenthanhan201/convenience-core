@@ -5,7 +5,7 @@
 import fse from 'fs-extra';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { $, cd, echo } from 'zx';
+import { cd, echo } from 'zx';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,10 +16,11 @@ const buildPath = path.join(root, './dist');
 async function publishPkgNah() {
   try {
     await cpBasePkgJson();
-    await Promise.all(['./CHANGELOG.md', './README.md', './plugin'].map(cpBaseFiles));
+    await Promise.all(['./CHANGELOG.md', './README.md'].map(cpBaseFiles));
+    await Promise.all(['./plugin'].map(cpBaseFolder));
     cd(buildPath);
     echo('Publishing...');
-    await $`npm publish`;
+    // await $`npm publish`;
     echo('Published!');
   } catch (error) {
     console.error(error);
@@ -53,6 +54,13 @@ async function cpBaseFiles(file) {
   const sourceFile = await fse.readFile(sourcePath, 'utf8');
   // Currently, bun not support copy file --> use writeFile instead
   await fse.writeFile(targetPath, sourceFile, 'utf8');
+  echo(`Copied ${humanizePathname(sourcePath)} to ${humanizePathname(targetPath)}`);
+}
+
+async function cpBaseFolder(folder) {
+  const sourcePath = path.resolve(root, folder);
+  const targetPath = path.resolve(buildPath, path.basename(folder));
+  await fse.copy(sourcePath, targetPath);
   echo(`Copied ${humanizePathname(sourcePath)} to ${humanizePathname(targetPath)}`);
 }
 
