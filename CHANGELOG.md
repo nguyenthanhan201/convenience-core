@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.1...v1.6.2) (2023-12-30)
+
+
+### Performance Improvements
+
+* refactor ([531cfa0](https://github.com/nguyenthanhan201/convenience-core/commit/531cfa03e389f7c5accefe82f3f1da75e71dfc6f))
+
 ## [1.6.1](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.0...v1.6.1) (2023-10-05)
 
 
