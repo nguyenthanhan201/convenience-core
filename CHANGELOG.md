@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.2...v1.6.3) (2023-12-30)
+
+
+### Bug Fixes
+
+* fix script ([e9ad7c1](https://github.com/nguyenthanhan201/convenience-core/commit/e9ad7c1ce971a43a442ef87e451255df1410f6dd))
+
 ## [1.6.2](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.1...v1.6.2) (2023-12-30)
 
 
