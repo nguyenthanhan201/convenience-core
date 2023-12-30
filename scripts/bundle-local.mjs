@@ -4,8 +4,8 @@ import fs from 'fs';
 
 // Function to execute the npm script
 function runScript() {
-  const version = getVersionFromPackageJson();
-  const npmScriptCommand = `npm run build && npm pack && mv convenience-core-${version}.tgz convenience-core-1.0.0.tgz`;
+  const { version, name } = getInfoPackageJson();
+  const npmScriptCommand = `npm run build && npm pack && mv ${name}-${version}.tgz convenience-core-1.5.0.tgz`;
   const child = exec(npmScriptCommand);
 
   child.stdout.on('data', (data) => {
@@ -21,15 +21,18 @@ function runScript() {
   });
 }
 
-function getVersionFromPackageJson() {
+function getInfoPackageJson() {
   try {
     const packageJsonPath = 'package.json';
     const packageJsonContent = fs.readFileSync(packageJsonPath, 'utf8');
     const packageJson = JSON.parse(packageJsonContent);
-    return packageJson.version;
+    return {
+      version: packageJson.version,
+      name: packageJson.name,
+    };
   } catch (error) {
     console.error('Error reading or parsing package.json:', error.message);
-    return null;
+    process.exit(1);
   }
 }
 
