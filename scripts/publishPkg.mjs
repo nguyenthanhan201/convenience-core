@@ -21,7 +21,7 @@ async function publishPkgNah() {
     cd(buildPath);
     echo('Publishing...');
     // await $`npm publish`;
-    echo('Published!');
+    // echo('Published!');
   } catch (error) {
     console.error(error);
     process.exit(1);
