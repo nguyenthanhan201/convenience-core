@@ -1,3 +1,5 @@
+#!/usr/bin/env zx
+
 // Idea là khi build ra dist folder --> copy 1 file package.json vào đó --> move executor(terminal) vào dist --> Nó sẽ publish nguyên cả folder dist.
 
 import fse from 'fs-extra';
