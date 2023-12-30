@@ -4,6 +4,15 @@
 ### Bug Fixes
 
 * fix ([19cbc55](https://github.com/nguyenthanhan201/convenience-core/commit/19cbc558c4eabc2d2d686a544161903fdf0f8527))
+* fix permission ([ea83ed6](https://github.com/nguyenthanhan201/convenience-core/commit/ea83ed69c97bbbeff6ab47b88f9a7ee08c90754d))
+* fix script ([e9ad7c1](https://github.com/nguyenthanhan201/convenience-core/commit/e9ad7c1ce971a43a442ef87e451255df1410f6dd))
+
+## [1.6.3](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.2...v1.6.3) (2023-12-30)
+
+
+### Bug Fixes
+
+* fix ([19cbc55](https://github.com/nguyenthanhan201/convenience-core/commit/19cbc558c4eabc2d2d686a544161903fdf0f8527))
 * fix script ([e9ad7c1](https://github.com/nguyenthanhan201/convenience-core/commit/e9ad7c1ce971a43a442ef87e451255df1410f6dd))
 
 ## [1.6.3](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.2...v1.6.3) (2023-12-30)
