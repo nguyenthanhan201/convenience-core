@@ -1,12 +1,12 @@
 import './index.css';
 
-import { Header, useSEO } from 'my-package';
+// import { Header, useSEO } from 'my-package';
 import ReactDOM from 'react-dom/client';
 
 // import Test from './lib/components/Test';
 
 const App = () => {
-  console.log(useSEO);
+  // console.log(useSEO);
   // set('123123123');
   // console.log(getCookie('test'));
   // console.log(useCookie('test'));
@@ -24,7 +24,7 @@ const App = () => {
       123
       {/* <div ref={ref}>h1</div>
       <Modal /> */}
-      <Header />
+      {/* <Header /> */}
     </>
   );
 };

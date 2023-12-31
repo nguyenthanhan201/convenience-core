@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import 'video.js/dist/video-js.css';
+// import 'video.js/dist/video-js.css';
 
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import videojs, { VideoJsPlayer } from 'video.js';
