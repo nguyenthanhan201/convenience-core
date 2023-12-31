@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/nguyenthanhan201/convenience-core/compare/v1.7.0...v1.7.1) (2023-12-31)
+
+
+### Bug Fixes
+
+* fix not update version package in root folder ([3b41176](https://github.com/nguyenthanhan201/convenience-core/commit/3b411766a4210cabb2f019540397623f86ce5b30))
+
 # [1.7.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.6...v1.7.0) (2023-12-31)
 
 
