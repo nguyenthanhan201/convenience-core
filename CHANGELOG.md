@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.4...v1.6.5) (2023-12-31)
+
+
+### Bug Fixes
+
+* fix Video component ([f2cf206](https://github.com/nguyenthanhan201/convenience-core/commit/f2cf20689447304ddb6b6eb89de464333796e461))
+
 ## [1.6.4](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.3...v1.6.4) (2023-12-30)
 
 
