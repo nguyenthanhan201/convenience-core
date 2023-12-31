@@ -2,7 +2,6 @@
   "name": "convenience-core",
   "version": "1.6.3",
   "type": "module",
-  "private": true,
   "description": "https://github.com/nguyenthanhan201/convenience-core",
   "scripts": {
     "dev": "vite",

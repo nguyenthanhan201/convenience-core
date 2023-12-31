@@ -37,10 +37,13 @@ async function cpBasePkgJson() {
 
   const newPkgData = {
     ...rest,
-    types: './index.d.ts',
-    typings: './index.d.ts',
-    main: './index.js',
-    module: './index.mjs',
+    // types: './index.d.ts',
+    // typings: './index.d.ts',
+    // main: './index.js',
+    // module: './index.mjs',
+    main: 'dist/index.js',
+    module: 'dist/index.cjs',
+    types: 'dist/index.d.ts',
   };
 
   const destination = path.resolve(buildPath, './package.json');
