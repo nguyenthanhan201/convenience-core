@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.6...v1.7.0) (2023-12-31)
+
+
+### Features
+
+* test update ([5afcc1a](https://github.com/nguyenthanhan201/convenience-core/commit/5afcc1a3bf9bac1eac60c4d0c6e20e4d37edcc93))
+
 ## [1.6.6](https://github.com/nguyenthanhan201/convenience-core/compare/v1.6.5...v1.6.6) (2023-12-31)
 
 
