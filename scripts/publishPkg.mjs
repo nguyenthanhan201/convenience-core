@@ -34,6 +34,7 @@ async function cpBasePkgJson() {
   const basePkgData = await fse.readFile(path.resolve(root, './package.json'), 'utf8');
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { scripts, devDependencies, files, exports, ...rest } = JSON.parse(basePkgData);
+  // const { devDependencies, exports, ...rest } = JSON.parse(basePkgData);
 
   const newPkgData = {
     ...rest,
@@ -41,9 +42,9 @@ async function cpBasePkgJson() {
     // typings: './index.d.ts',
     // main: './index.js',
     // module: './index.mjs',
-    main: 'dist/index.js',
-    module: 'dist/index.cjs',
-    types: 'dist/index.d.ts',
+    main: 'index.js',
+    module: 'index.cjs',
+    types: 'index.d.ts',
   };
 
   const destination = path.resolve(buildPath, './package.json');

@@ -17,6 +17,12 @@
       }
     ],
     [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "dist/CHANGELOG.md"
+      }
+    ],
+    [
       "@semantic-release/npm",
       {
         "pkgRoot": "dist"
