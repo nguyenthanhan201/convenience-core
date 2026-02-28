@@ -1,0 +1,44 @@
+import '../mdx.css';
+
+<div className="sb-container">
+<div>
+# Usage
+
+```jsx
+convertCase('mixed_string with spaces_underscores-and-hyphens', 'camel');
+// 'mixedStringWithSpacesUnderscoresAndHyphens'
+convertCase('mixed_string with spaces_underscores-and-hyphens', 'pascal');
+// 'MixedStringWithSpacesUnderscoresAndHyphens'
+convertCase('mixed_string with spaces_underscores-and-hyphens', 'kebab');
+// 'mixed-string-with-spaces-underscores-and-hyphens'
+convertCase('mixed_string with spaces_underscores-and-hyphens', 'snake');
+// 'mixed_string_with_spaces_underscores_and_hyphens'
+convertCase('mixed_string with spaces_underscores-and-hyphens', 'title');
+// 'Mixed String With Spaces Underscores And Hyphens'
+convertCase('mixed_string with spaces_underscores-and-hyphens', 'sentence');
+// 'Mixed string with spaces underscores and hyphens'
+```
+
+# API
+
+Component accepts 2 arguments:
+
+<ul>
+  <li>
+    <code>string</code> – string to convert
+  </li>
+  <li>
+    <code>toCase</code> – case to convert to, one of <code>camel</code>, <code>pascal</code>,{' '}
+    <code>kebab</code>, <code>snake</code>, <code>title</code>, <code>sentence</code>
+  </li>
+</ul>
+
+</div>
+
+<div className="sb-table__content">
+<ul>
+<li>[Usage](#usage) </li>
+<li>[API](#api)</li>
+</ul>
+</div>
+</div>

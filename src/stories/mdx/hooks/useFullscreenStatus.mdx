@@ -1,0 +1,68 @@
+import '../mdx.css';
+
+<div className="sb-container">
+<div>
+# Usage
+
+```jsx
+import { useRef } from "react";
+import useFullscreenStatus from "./useFullscreenStatus";
+
+const AppVideo = (props: any) => {
+  const { source } = props;
+
+  const videoElem = useRef(null);
+
+   // If you want to keep the custom controls of the video, apply the
+   // fullScreen to the container of the controls and the video, if you only
+   // apply fullscreen to the video, the browser will use the default controls
+   // of the useragent
+
+  let isFullScreen, setIsFullScreen;
+
+  try {
+    [isFullScreen, setIsFullScreen] = useFullscreenStatus(videoElem);
+  } catch (e) {
+    console.error("Fullscreen not supported");
+    isFullScreen = false;
+    setIsFullScreen = undefined;
+  }
+
+  const handleExitFullScreen = () => document.exitFullscreen();
+  return (
+    <div ref={videoElem}>
+      <video src={source} controls />
+      <div className="AppVideo__Controls">
+        ...
+        <button onClick={isFullScreen ? handleExitFullScreen : setIsFullScreen}>
+          {isFullScreen ? "Minimize" : "Expand"}
+        </button>
+        ...
+      </div>
+    </div>
+  );
+};
+
+export default AppVideo;
+
+```
+
+# API
+
+Hook accepts 1 arguments:
+
+<ul>
+  <li>
+    <code>elRef</code> – reference to the element to check if it is in fullscreen mode
+  </li>
+</ul>
+
+</div>
+
+<div className="sb-table__content">
+<ul>
+<li>[Usage](#usage) </li>
+<li>[API](#api)</li>
+</ul>
+</div>
+</div>
